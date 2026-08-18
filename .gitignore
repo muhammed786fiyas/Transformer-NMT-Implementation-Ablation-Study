@@ -1,0 +1,40 @@
+# ── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── Virtual envs ─────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Model checkpoints / large artifacts ──────────────────
+# Checkpoints are huge and should NOT be in git. Host the final
+# .pth on Google Drive and load it via gdown in Transformer().
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# ── Datasets / caches ────────────────────────────────────
+# Multi30k is fetched by `datasets` at runtime — never commit it.
+data/
+.cache/
+*.jsonl
+
+# ── Weights & Biases local run dir ───────────────────────
+wandb/
+
+# ── Local-only verification scripts (NOT submitted) ──────
+# These are your scaffolding, not part of the deliverable.
+test_lr_scheduler.py
+test_model.py
+test_train.py
+overfit_check.py
+
+# ── Editor / OS noise ────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+*.swp
